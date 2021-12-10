@@ -1,0 +1,22 @@
+@mixin color-principal {
+    color: blue;
+}
+
+h1{
+    @include color-principal();
+}
+
+@mixin encabezados($tamano) {
+    h1 {
+        font-size: $tamano * 2;
+    }
+    h2{
+        font-size: $tamano;
+    }
+    h3{
+        font-size: $tamano / 2;
+    }
+    
+}
+
+@include encabezados(2em);
